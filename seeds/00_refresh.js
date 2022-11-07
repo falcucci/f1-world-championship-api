@@ -5,7 +5,10 @@ exports.seed = function (knex, Promise) {
     // Deletes ALL existing entries
     knex("drivers").del(),
     knex("circuits").del(),
+    knex("constructors").del(),
+    knex("statuses").del(),
     knex("races").del(),
     knex("driver_standings").del(),
+    knex("results").del(),
   ]);
 };
