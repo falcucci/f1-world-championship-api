@@ -1,24 +1,58 @@
-version: '3.6'
+version: '3'
 services:
-  postgres:
-    image: postgres:12
-    restart: always
-    volumes:
-    - db_data:/var/lib/postgresql/data
+  app:
+    restart: on-failure
+    build: .
+    depends_on:
+      - postgres
     environment:
-      POSTGRES_PASSWORD: postgrespassword
+      DATASOURCES_RACE_ADDR: postgres
+      NODE_ENV: development
+    ports:
+      - "3000"
+    command: npm run dev
+    volumes:
+      - .:/app/
+    networks:
+      - default
+
+  postgres:
+    image: postgres:14
+    healthcheck:
+      test: [
+        "CMD",
+        "pg_isready",
+        "-d",
+        "races_db",
+        "-U",
+        "races",
+        "-h",
+        "postgres"
+      ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: races
+      POSTGRES_PASSWORD: localhost
+      POSTGRES_DB: races_db
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/
+
   graphql-engine:
     image: hasura/graphql-engine:v2.14.0
     ports:
     - "8080:8080"
     depends_on:
-    - "postgres"
+    - postgres
     restart: always
     environment:
       ## postgres database to store Hasura metadata
-      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
+      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgresql://postgres:5432/races_db?user=races&password=localhost
       ## this env var can be used to add the above postgres database to Hasura as a data source. this can be removed/updated based on your needs
-      PG_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
+      PG_DATABASE_URL: postgresql://postgres:5432/races_db?user=races&password=localhost 
       ## enable the console served by server
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
       ## enable debugging mode. It is recommended to disable this in production
@@ -28,6 +62,4 @@ services:
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
       ## uncomment next line to set an admin secret
       # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
-volumes:
-  db_data:
 

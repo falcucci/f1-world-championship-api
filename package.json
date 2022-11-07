@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "knex": "knex",
+    "migrate": "knex migrate:latest",
+    "seeds": "knex seed:run",
     "lint": "next lint"
   },
   "dependencies": {
