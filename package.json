@@ -16,7 +16,6 @@
     "axios": "^0.26.1",
     "got": "^12.1.0",
     "knex": "^0.10.0",
-    "knex-csv-transformer": "^1.0.4",
     "moment": "^2.29.4",
     "next": "13.0.1",
     "pg": "^8.8.0",
@@ -24,7 +23,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "knex-csv-seeder": "^0.4.1",
     "sqlite3": "^5.1.2"
   }
 }
