@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "convert-csv-to-json": "^1.3.3",
+    "axios": "^0.26.1",
+    "got": "^12.1.0",
     "knex": "^0.10.0",
     "knex-csv-transformer": "^1.0.4",
     "moment": "^2.29.4",

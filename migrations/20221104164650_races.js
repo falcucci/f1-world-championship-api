@@ -18,7 +18,7 @@ exports.up = function (knex) {
       .references("id")
       .inTable("circuits");
 
-    table.comment("Table from driver_standings");
+    table.comment("Table from races");
     table.index(
       [
         "id",
