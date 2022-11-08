@@ -12,10 +12,10 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        url: `api/hello`,
+        url: `api/health`,
       });
       if (res.status === 200) {
-        console.log(res.data, "Hello");
+        console.log(res.data);
       }
     };
     // const getCountryByNationality = async () => {
