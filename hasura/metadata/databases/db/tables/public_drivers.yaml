@@ -1,0 +1,18 @@
+table:
+  name: drivers
+  schema: public
+array_relationships:
+  - name: standings
+    using:
+      foreign_key_constraint_on:
+        column: driver_id
+        table:
+          name: driver_standings
+          schema: public
+  - name: result
+    using:
+      foreign_key_constraint_on:
+        column: driver_id
+        table:
+          name: results
+          schema: public

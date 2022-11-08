@@ -1,0 +1,7 @@
+table:
+  name: races
+  schema: public
+object_relationships:
+- name: circuit
+  using:
+    foreign_key_constraint_on: circuit_id

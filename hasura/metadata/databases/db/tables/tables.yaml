@@ -1,0 +1,7 @@
+- "!include public_results.yaml"
+- "!include public_drivers.yaml"
+- "!include public_races.yaml"
+- "!include public_statuses.yaml"
+- "!include public_constructors.yaml"
+- "!include public_circuits.yaml"
+- "!include public_driver_standings.yaml"
