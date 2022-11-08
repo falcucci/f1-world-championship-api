@@ -41,6 +41,10 @@ exports.up = function (knex) {
         "fastest_lap",
         "fastest_lap_time",
         "fastest_lap_speed",
+        "driver_id",
+        "race_id",
+        "constructor_id",
+        "status_id",
       ],
       "idx_results_1"
     );

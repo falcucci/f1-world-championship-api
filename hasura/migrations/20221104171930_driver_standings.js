@@ -14,7 +14,7 @@ exports.up = function (knex) {
 
     table.comment("Table from driver_standings");
     table.index(
-      ["id", "points", "position", "wins"],
+      ["id", "points", "position", "wins", "driver_id", "race_id"],
       "idx_driver_standings_1"
     );
     table.engine("InnoDB");

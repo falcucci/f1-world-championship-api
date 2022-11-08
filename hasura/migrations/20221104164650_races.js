@@ -32,6 +32,7 @@ exports.up = function (knex) {
         "fp3_datetime",
         "sprint_datetime",
         "qualification_datetime",
+        "circuit_id",
       ],
       "idx_races_1"
     );
