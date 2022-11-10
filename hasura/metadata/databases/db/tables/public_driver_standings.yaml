@@ -1,0 +1,10 @@
+table:
+  name: driver_standings
+  schema: public
+object_relationships:
+- name: driver
+  using:
+    foreign_key_constraint_on: driver_id
+- name: race
+  using:
+    foreign_key_constraint_on: race_id

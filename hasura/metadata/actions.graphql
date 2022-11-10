@@ -1,0 +1,35 @@
+type Query {
+  getDrivers(from: String!, to: String!, limit: Int!): [Drivers]
+}
+
+type Drivers {
+  forename: String
+  id: Int
+  result: [Result]
+  standings_aggregate: StandingsAggregate
+  surname: String
+}
+
+type Result {
+  fastest_lap_speed: Float
+  milliseconds: Int
+  race: Race
+}
+
+type Race {
+  datetime: String
+  name: String
+  year: Int
+}
+
+type StandingsAggregate {
+  aggregate: Aggregate
+}
+
+type Aggregate {
+  sum: Sum
+}
+
+type Sum {
+  wins: Int
+}

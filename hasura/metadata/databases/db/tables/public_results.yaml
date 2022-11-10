@@ -1,0 +1,16 @@
+table:
+  name: results
+  schema: public
+object_relationships:
+- name: driver
+  using:
+    foreign_key_constraint_on: driver_id
+- name: race
+  using:
+    foreign_key_constraint_on: race_id
+- name: status
+  using:
+    foreign_key_constraint_on: status_id
+- name: constructor
+  using:
+    foreign_key_constraint_on: constructor_id

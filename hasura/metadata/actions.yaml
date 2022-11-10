@@ -1,0 +1,16 @@
+actions:
+    - name: getDrivers
+      definition:
+        kind: synchronous
+        handler: http://localhost:3000/api/actions/drivers
+custom_types:
+    enums: []
+    input_objects: []
+    objects:
+        - name: Drivers
+        - name: Result
+        - name: Race
+        - name: StandingsAggregate
+        - name: Aggregate
+        - name: Sum
+    scalars: []

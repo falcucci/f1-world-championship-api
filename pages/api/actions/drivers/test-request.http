@@ -1,0 +1,41 @@
+POST http://localhost:8080/v1/graphql HTTP/1.1
+X-Request-Type: GraphQL
+Content-Type: application/json
+X-Hasura-Admin-Secret: my-secret
+
+# Call the Hasura Action which maps to Next.js /api/actions/drivers
+query {
+  getDrivers(from: "2021-12-16", to: "2023-12-16", limit: 10) {
+    id
+    forename
+    surname
+    standings_aggregate {
+      aggregate {
+        sum {
+          wins
+        }
+      }
+    }
+    result {
+      milliseconds
+      fastest_lap_speed
+      race {
+        year
+        name
+        datetime
+      }
+    }
+  }
+}
+###
+
+POST http://localhost:3000/api/actions/drivers HTTP/1.1
+Content-Type: application/json
+
+{
+  "input": {
+    "from": "2021-12-16",
+    "to": "2023-12-16",
+    "limit": 10
+  }
+}
