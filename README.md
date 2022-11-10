@@ -1,6 +1,8 @@
-<h1 align="center">
-  <b>F1 World Championship Service</b><br>
-</h1>
+<h1 align="center">F1 World Championship Service</h1>
+<p align="center">A project about driver winners</p>
+
+___
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.getpostman.com/collections/5ae5b5688e9cbee57e46)
 
 ## Application Architectural Overview
 ____
