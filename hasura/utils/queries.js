@@ -1,6 +1,13 @@
 const GetResultsQuery = `
 query Results($ids: [Int!]) {
-  results(where: {milliseconds: {_is_null: false}, race: {datetime: {}}, driver_id: {_in: $ids}}, order_by: {race: {datetime: desc}}) {
+  results(
+    where: {
+      milliseconds: { _is_null: false }
+      race: { datetime: {} }
+      driver_id: { _in: $ids }
+    }
+    order_by: { race: { datetime: desc } }
+  ) {
     race {
       year
       datetime
