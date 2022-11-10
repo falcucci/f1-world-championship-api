@@ -31,10 +31,11 @@ export default async function handler(req, res) {
       .json({ message: vr.error.message });
   }
 
-  const { data: driversResponse , errors: driversErrros } = await fetchGraphQL(
-    GetDriversQuery,
-    vr.value.input
-  );
+  // GET drivers
+  const {
+    data: driversResponse,
+    errors: driversErrros,
+  } = await fetchGraphQL(GetDriversQuery, vr.value.input);
 
   if (driversErrros) {
     return res
@@ -42,12 +43,14 @@ export default async function handler(req, res) {
       .json({ message: driversErrros[0].message });
   }
 
-  const { drivers } = driversResponse
+  const { drivers } = driversResponse;
   const ids = _.map(drivers, "id");
-  const { data: resultsResponse , errors: resultsErrors } = await fetchGraphQL(
-    GetResultsQuery,
-    { ids }
-  );
+
+  // GET results
+  const {
+    data: resultsResponse,
+    errors: resultsErrors,
+  } = await fetchGraphQL(GetResultsQuery, { ids });
 
   if (resultsErrors) {
     return res
@@ -57,17 +60,16 @@ export default async function handler(req, res) {
 
   const { results } = resultsResponse;
   drivers.forEach(driver => {
-    driver.result =
-      _.chain(results)
-      .filter({driver_id: driver.id})
+    driver.result = _.chain(results)
+      .filter({ driver_id: driver.id })
       .map(result => {
         return {
           race: result.race,
           milliseconds: result.milliseconds,
-          fastest_lap_speed: result.fastest_lap_speed
-        }
+          fastest_lap_speed: result.fastest_lap_speed,
+        };
       })
       .value();
-  })
+  });
   return res.status(StatusCodes.OK).json(drivers);
 }
