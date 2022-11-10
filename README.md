@@ -2,6 +2,9 @@
   <b>F1 World Championship Service</b><br>
 </h1>
 
+## Application Architectural Overview
+![Untitled-2022-11-10-1751-5](https://user-images.githubusercontent.com/33763843/201171541-347b2848-f2b7-41eb-ae17-40b275eb891f.png)
+
 Running the service requires some dependencies.
 
 1. Docker and Docker Compose installed. [Install instructions.](https://docs.docker.com/get-docker/)
