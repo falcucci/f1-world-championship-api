@@ -2,7 +2,7 @@ actions:
     - name: getDrivers
       definition:
         kind: synchronous
-        handler: http://localhost:3000/api/actions/drivers
+        handler: '{{ACTIONS_BASE_URL}}/api/actions/drivers'
 custom_types:
     enums: []
     input_objects: []

@@ -8,8 +8,11 @@ services:
     environment:
       DATASOURCES_RACE_ADDR: postgres
       NODE_ENV: development
+      HASURA_PROJECT_ENDPOINT: http://graphql-engine:8080/v1/graphql
+      NEXTJS_SERVER_URL: http://app:3000
+      ACTIONS_BASE_URL: http://app:3000
     ports:
-      - "3000"
+      - "3000:3000"
     command: npm run dev
     volumes:
       - .:/app/
@@ -58,6 +61,7 @@ services:
       ## enable debugging mode. It is recommended to disable this in production
       HASURA_GRAPHQL_DEV_MODE: "true"
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ACTIONS_BASE_URL: http://app:3000
       ## uncomment next line to run console offline (i.e load console assets from server instead of CDN)
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
       ## uncomment next line to set an admin secret

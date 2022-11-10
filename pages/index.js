@@ -22,13 +22,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>F1 CHAMPIONSHIP</title>
+        <title>F1 World Championship Service</title>
         <meta name='description' content='Get winners' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to F1 WORLD CHAMPIONSHIP Serverless Functions!</h1>
+        <h1 className={styles.title}>F1 World Championship Service</h1>
       </main>
 
       <footer className={styles.footer}>
