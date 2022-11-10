@@ -17,9 +17,6 @@ Running the service requires some dependencies.
 3. Hasura CLI installed. [Instructions here.](https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html)
 
 
-
-
-
 ## Running the service
 - Run `docker-compose up -d --build`
 - Make sure all migrations are applied by running `npm run migrate`
@@ -105,8 +102,12 @@ query {
     }
   } 
 }
-
 ```
+
+## DISCLAIMER
+
+The high latency of the servers of the graphQL engine and the vercel serveless functions is due the zone and cold start reasons. It should runs faster if we boost the server and change the regions. Also I made a tiny performance improvement to make sure it was the server latency instead of a low query issue at our engine. Try it out locally to see the difference.
+
 #### The Node Way&trade;
 
 > "When applications are done well, they are just the really application-specific, brackish residue that can't be so easily abstracted away. All the nice, reusable components sublimate away onto github and npm where everybody can collaborate to advance the commons."
