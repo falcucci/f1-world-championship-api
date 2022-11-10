@@ -3,7 +3,9 @@
 </h1>
 
 ## Application Architectural Overview
-![Untitled-2022-11-10-1751-6](https://user-images.githubusercontent.com/33763843/201174720-39f67b57-7f70-463e-8d11-4e99d8298813.png)
+____
+
+![Untitled-2022-11-10-1751-7](https://user-images.githubusercontent.com/33763843/201176408-7c3ec3da-d674-4dba-b6e0-5622a841191a.png)
 
 Running the service requires some dependencies.
 
