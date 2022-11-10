@@ -108,6 +108,11 @@ query {
 
 The high latency of the servers of the graphQL engine and the vercel serveless functions is due the zone and cold start reasons. It should runs faster if we boost the server and change the regions. Also I made a tiny performance improvement to make sure it was the server latency instead of a low query issue at our engine. Try it out locally to see the difference.
 
+## Deploy It Yourself 🎉
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/falcucci/f1-world-championship-api)
+
+
 #### The Node Way&trade;
 
 > "When applications are done well, they are just the really application-specific, brackish residue that can't be so easily abstracted away. All the nice, reusable components sublimate away onto github and npm where everybody can collaborate to advance the commons."
