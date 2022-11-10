@@ -26,6 +26,14 @@ npm run dev
 yarn dev
 ```
 
+In case you need to load env vars use the `.env` file as the sample
+
+| name | description |
+| ---- | ----------- |
+| `HASURA_PROJECT_ENDPOINT`  | GraphQL engine endpoint |
+| `NEXTJS_SERVER_URL`   | Next server |
+| `ACTIONS_BASE_URL`  | Actions endpoint |
+
 Serveless functions are running at https://f1-world-championship-api.vercel.app/api/health
 
 check it out the functions.
