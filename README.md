@@ -11,9 +11,7 @@ Running the service requires some dependencies.
 3. Hasura CLI installed. [Instructions here.](https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html)
 
 
-Go to http://localhost:3000 to access the serveless functions
 
-Go to http://localhost:8080 for Hasura console (admin secret = "")
 
 
 ## Running the service
@@ -22,13 +20,6 @@ Go to http://localhost:8080 for Hasura console (admin secret = "")
 - Make sure to fulfill the database using the seeds by running `npm run seeds`
 - To start exploring, start hasura console with `hasura console`
 
-Or, run the development server by yourself to check better logs:
-```bash
-npm run dev
-# or
-yarn dev
-```
-
 In case you need to load env vars use the `.env` file as the sample
 
 | name | description |
@@ -36,6 +27,17 @@ In case you need to load env vars use the `.env` file as the sample
 | `HASURA_PROJECT_ENDPOINT`  | GraphQL engine endpoint |
 | `NEXTJS_SERVER_URL`   | Next server |
 | `ACTIONS_BASE_URL`  | Actions endpoint |
+
+Or, run the development server by yourself to check better logs:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Go to http://localhost:3000 to access the serveless functions
+
+Go to http://localhost:8080 for Hasura console (admin secret = "")
 
 Serveless functions are running at https://f1-world-championship-api.vercel.app/api/health
 
