@@ -1,3 +1,18 @@
+const GetResultsQuery = `
+query Results($ids: [Int!]) {
+  results(where: {milliseconds: {_is_null: false}, race: {datetime: {}}, driver_id: {_in: $ids}}, order_by: {race: {datetime: desc}}) {
+    race {
+      year
+      datetime
+      name
+    }
+    milliseconds
+    fastest_lap_speed
+    driver_id
+  }
+}
+`;
+
 const GetDriversQuery = `
 query Drivers($from: timestamptz!, $to: timestamptz!, $limit: Int!) {
   drivers(
@@ -18,22 +33,11 @@ query Drivers($from: timestamptz!, $to: timestamptz!, $limit: Int!) {
         }
       }
     }
-    result(
-      where: { milliseconds: { _is_null: false }, race: { datetime: {} } }
-      order_by: { race: { datetime: desc } }
-    ) {
-      race {
-        year
-        datetime
-        name
-      }
-      milliseconds
-      fastest_lap_speed
-    }
   }
 }
-`;              
+`;
 
 module.exports = {
- GetDriversQuery
-}
+  GetDriversQuery,
+  GetResultsQuery,
+};
