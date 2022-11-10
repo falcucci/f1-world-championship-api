@@ -20,6 +20,18 @@ Running the service requires some dependencies.
 - Make sure to fulfill the database using the seeds by running `npm run seeds`
 - To start exploring, start hasura console with `hasura console`
 
+if you wanna make sure the migrations has been applied to the correct schema, run:
+
+```sh
+docker exec f1-world-championship-api_app_1 sh -c npm run migrate"
+```
+
+and also the seeds to make sure
+
+```sh
+docker exec f1-world-championship-api_app_1 sh -c npm run seeds"
+```
+
 In case you need to load env vars use the `.env` file as the sample
 
 | name | description |
