@@ -5,7 +5,7 @@
 ## Application Architectural Overview
 ____
 
-![Untitled-2022-11-10-1751-7](https://user-images.githubusercontent.com/33763843/201176408-7c3ec3da-d674-4dba-b6e0-5622a841191a.png)
+<img width="1209" alt="Screenshot 2022-11-10 at 19 38 28" src="https://user-images.githubusercontent.com/33763843/201179042-cc6de8f8-609c-4ea3-a632-ba010f6ccccd.png">
 
 Running the service requires some dependencies.
 
