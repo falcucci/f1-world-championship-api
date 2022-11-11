@@ -119,7 +119,7 @@ here you have a simple test coverage report:
 
 ## DISCLAIMER
 
-The high latency of the servers of the graphQL engine and the vercel serveless functions is due the zone and cold start reasons. It should runs faster if we boost the server and change the regions. Also I made a tiny performance improvement to make sure it was the server latency instead of a low query issue at our engine. Try it out locally to see the difference.
+The high latency of the servers of the GraphQL engine and the vercel serveless functions is due the zone and cold start reasons. It should runs faster if we boost the server and change the regions. Also I made a tiny performance improvement to make sure it was the server latency instead of a low query issue at our engine. Try it out locally to see the difference.
 
 ## Deploy It Yourself 🎉
 
