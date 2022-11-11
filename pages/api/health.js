@@ -1,5 +1,5 @@
 const { StatusCodes, getReasonPhrase } = require('http-status-codes');
 
 module.exports = function handler(req, res) {
-  res.status(StatusCodes.OK).json({ status: getReasonPhrase(200) })
+  res.status(StatusCodes.OK).json({ status: getReasonPhrase(StatusCodes.OK) })
 }
