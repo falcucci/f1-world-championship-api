@@ -6,7 +6,7 @@ exports.seed = function (knex, Promise) {
     .fieldDelimiter(",")
     .parseSubArray('"')
     .formatValueByType()
-    .getJsonFromCsv("./../races.csv");
+    .getJsonFromCsv("./../__data__/dataset/races.csv");
 
   const nValues = values.map(value => {
     const formattedFp1DateString =

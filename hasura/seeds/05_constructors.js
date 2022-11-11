@@ -5,7 +5,7 @@ exports.seed = async function (knex) {
     .fieldDelimiter(",")
     .parseSubArray('"')
     .formatValueByType()
-    .getJsonFromCsv("./../constructors.csv");
+    .getJsonFromCsv("./../__data__/dataset/constructors.csv");
 
   const nValues = values.map(value => {
     return {
