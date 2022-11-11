@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "test": "./scripts/tests.sh",
+    "coverage": "nyc --lines 70 --reporter=lcov --reporter=text-summary --report-dir ./coverage npm run test",
     "build": "next build",
     "start": "next start",
     "knex": "knex",
@@ -33,6 +34,7 @@
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
     "mocha": "^10.1.0",
+    "nyc": "^15.1.0",
     "sqlite3": "^5.1.2",
     "unexpected": "^13.0.1"
   }
