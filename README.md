@@ -35,6 +35,12 @@ and also the seeds to make sure
 docker exec f1-world-championship-api_app_1 sh -c npm run seeds"
 ```
 
+dont forget to track the schemas and create the actions
+
+```sh
+hasura metadata apply
+```
+
 In case you need to load env vars use the `.env` file as the sample
 
 | name | description |
