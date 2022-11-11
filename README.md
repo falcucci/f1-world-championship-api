@@ -1,6 +1,6 @@
 <h1 align="center">F1 World Championship Service</h1>
 
-<p align="center">A project to analyze drivers winners</p> 
+<p align="center">A project to analyze drivers winners.</p> 
 
 
 ___
