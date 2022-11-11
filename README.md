@@ -103,6 +103,19 @@ query {
   } 
 }
 ```
+# Test Coverage
+
+you can check if everything is fine running the assertions
+```bash
+npm run test
+```
+generate coverage
+```bash
+npm run coverage
+```
+
+here you have a simple test coverage report:
+<img width="1171" alt="Screenshot 2022-11-11 at 04 24 32" src="https://user-images.githubusercontent.com/33763843/201256381-95a9c725-b1d8-4cfe-a018-36b978d0a3fb.png">
 
 ## DISCLAIMER
 
