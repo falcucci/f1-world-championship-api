@@ -9,6 +9,7 @@ package-lock.json
 
 # testing
 /coverage
+.nyc_output/
 
 # next.js
 /.next/

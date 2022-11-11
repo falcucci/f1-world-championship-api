@@ -9,7 +9,6 @@ module.exports = {
       user: process.env["DATASOURCES_RACE_USER"] || "races",
       password:
         process.env["DATASOURCES_RACE_PASSWORD"] || "localhost",
-      ssl: { rejectUnauthorized: false }
     },
     pool: {
       min: process.env["DATASOURCES_RACE_OPTIONS_POOL_MAX"] || 1,

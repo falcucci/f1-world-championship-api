@@ -6,7 +6,7 @@ const chaiHttp = require("chai-http");
 const { StatusCodes } = require('http-status-codes');
 
 const { app } = require("../server");
-const mock = require("../../__data__/drivers");
+const mock = require("../../__data__/mock/drivers");
 
 chai.use(chaiHttp);
 chai.should();
