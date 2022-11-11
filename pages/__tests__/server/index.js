@@ -1,4 +1,4 @@
-// custom server to run tests
+// DISCLAIMER: custom Next.js server to run tests only
 
 const { createServer } = require('http')
 const { parse } = require('url')
