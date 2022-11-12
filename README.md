@@ -126,7 +126,7 @@ here you have a simple test coverage report.
 
 ### The visual sample
 
-The bar chart below shows 10 racers who have the most wins by time.
+As an example, we are consuming the `getDrivers` action to build the bar chart below that shows 10 racers who have the most wins by time.
 
 <img width="1351" alt="Screenshot 2022-11-12 at 02 42 43" src="https://user-images.githubusercontent.com/33763843/201450728-83485990-dc9a-40ee-ba59-4d8389b54c06.png">
 
