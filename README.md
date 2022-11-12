@@ -120,8 +120,15 @@ generate coverage
 npm run coverage
 ```
 
-here you have a simple test coverage report:
+here you have a simple test coverage report.
+
 <img width="1171" alt="Screenshot 2022-11-11 at 04 24 32" src="https://user-images.githubusercontent.com/33763843/201256381-95a9c725-b1d8-4cfe-a018-36b978d0a3fb.png">
+
+### The visual sample
+
+The bar chart below shows 10 racers who have the most wins by time.
+
+<img width="1351" alt="Screenshot 2022-11-12 at 02 42 43" src="https://user-images.githubusercontent.com/33763843/201450728-83485990-dc9a-40ee-ba59-4d8389b54c06.png">
 
 ## DISCLAIMER
 
