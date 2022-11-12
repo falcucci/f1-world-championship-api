@@ -120,13 +120,13 @@ generate coverage
 npm run coverage
 ```
 
-here you have a simple test coverage report.
+Here you have a simple test coverage report.
 
 <img width="1171" alt="Screenshot 2022-11-11 at 04 24 32" src="https://user-images.githubusercontent.com/33763843/201256381-95a9c725-b1d8-4cfe-a018-36b978d0a3fb.png">
 
 ### The visual sample
 
-As an example, we are consuming the `getDrivers` action to build the bar chart below that shows 10 racers who have the most wins by time.
+As an example, the [bar chart below](https://falcucci.grafana.net/goto/VOqcJsDVz?orgId=1) shows 10 racers who have the most wins by time already consumed by our `GetDrivers` Hasura action.
 
 <img width="1351" alt="Screenshot 2022-11-12 at 02 42 43" src="https://user-images.githubusercontent.com/33763843/201450728-83485990-dc9a-40ee-ba59-4d8389b54c06.png">
 
